@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <!--<link href="./style.css" rel="stylesheet" />-->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none;
+      }
+      #main-cont {
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .col-cont {
+        display: flex;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      function change() {
+        let colors = [
+          "AliceBlue",
+          "AntiqueWhite",
+          "Aqua",
+          "Aquamarine",
+          "Azure",
+          "Beige",
+          "Bisque",
+          "Black",
+          "BlanchedAlmond",
+          "Blue",
+          "BlueViolet",
+          "Brown",
+          "BurlyWood",
+          "CadetBlue",
+          "Chartreuse",
+          "Chocolate",
+          "Coral",
+          "CornflowerBlue",
+          "Cornsilk",
+          "Crimson",
+          "Cyan",
+          "DarkBlue",
+          "DarkCyan",
+          "DarkGoldenRod",
+          "DarkGray",
+          "DarkGrey",
+          "DarkGreen",
+          "DarkKhaki",
+          "DarkMagenta",
+          "DarkOliveGreen",
+          "DarkOrange",
+          "DarkOrchid",
+          "DarkRed",
+          "DarkSalmon",
+          "DarkSeaGreen",
+          "DarkSlateBlue",
+          "DarkSlateGray",
+          "DarkSlateGrey",
+          "DarkTurquoise",
+          "DarkViolet",
+          "DeepPink",
+          "DeepSkyBlue",
+          "DimGray",
+          "DimGrey",
+          "DodgerBlue",
+          "FireBrick",
+          "FloralWhite",
+          "ForestGreen",
+          "Fuchsia",
+          "Gainsboro",
+          "GhostWhite",
+          "Gold",
+          "GoldenRod",
+          "Gray",
+          "Grey",
+          "Green",
+          "GreenYellow",
+          "HoneyDew",
+          "HotPink",
+          "IndianRed",
+          "Indigo",
+          "Ivory",
+          "Khaki",
+          "Lavender",
+          "LavenderBlush",
+          "LawnGreen",
+          "LemonChiffon",
+          "LightBlue",
+          "LightCoral",
+          "LightCyan",
+          "LightGoldenRodYellow",
+          "LightGray",
+          "LightGrey",
+          "LightGreen",
+          "LightPink",
+          "LightSalmon",
+          "LightSeaGreen",
+          "LightSkyBlue",
+          "LightSlateGray",
+          "LightSlateGrey",
+          "LightSteelBlue",
+          "LightYellow",
+          "Lime",
+          "LimeGreen",
+          "Linen",
+          "Magenta",
+          "Maroon",
+          "MediumAquaMarine",
+          "MediumBlue",
+          "MediumOrchid",
+          "MediumPurple",
+          "MediumSeaGreen",
+          "MediumSlateBlue",
+          "MediumSpringGreen",
+          "MediumTurquoise",
+          "MediumVioletRed",
+          "MidnightBlue",
+          "MintCream",
+          "MistyRose",
+          "Moccasin",
+        ];
+        let item = colors[Math.floor(Math.random() * colors.length)];
+        document.getElementById("main-cont").style.backgroundColor = item;
+        document.getElementById("col").innerHTML = item;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="main-cont">
+      <div class="col-cont" onclick="change()">
+        <h1>BackGround Color :&nbsp</h1>
+        <h1 id="col">white</h1>
+      </div>
+      <h5>(click the above text)</h5>
+    </div>
+  </body>
+</html>

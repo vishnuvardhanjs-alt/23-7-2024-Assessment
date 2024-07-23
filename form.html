@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none;
+      }
+
+      body {
+        background-color: #ffffad;
+      }
+
+      .main-cont {
+        height: 100vh;
+        width: 100vw;
+        background-color: #ffffad;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .q-box {
+        height: 50vh;
+        width: 30vw;
+        background-color: white;
+        border: 2px solid yellow;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .btn-grad {
+        background-image: linear-gradient(
+          to right,
+          #f09819 0%,
+          #edde5d 51%,
+          #f09819 100%
+        );
+        padding: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: black;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+        cursor: pointer;
+        height: 30px;
+      }
+
+      textarea {
+        height: 50px;
+        width: 80%;
+        resize: none;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+      }
+      img {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        border: 2px solid yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      function check() {
+        let ques = [
+          "what is your name",
+          "how old are you",
+          "who are you",
+          "are you fine",
+          "what did you eat",
+          "did you sleep well",
+          "how are you",
+        ];
+
+        let rep = document.getElementById("chk_ques").value;
+        for (let i = 0; i < ques.length; i++) {
+          if (rep === ques[i]) {
+            alert("Question Accepted!");
+            return;
+          }
+        }
+        alert("Question Declined!");
+      }
+    </script>
+    <div class="main-cont">
+      <div class="q-box">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+          alt=""
+        />
+        <h2>Ask me a Question</h2>
+        <textarea rows="" cols="" id="chk_ques"></textarea>
+        <button type="" class="btn-grad" onclick="check()">Check!</button>
+      </div>
+    </div>
+  </body>
+</html>
